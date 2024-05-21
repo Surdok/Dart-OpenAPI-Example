@@ -4,12 +4,9 @@ import 'package:dio/dio.dart';
 import 'package:openapi/openapi.dart';
 
 void main(List<String> arguments) {
-  var dio = new Dio();
-  var openApi = new Openapi(dio: dio);
+  var openApi = new Openapi();
 
   var userApi = openApi.getUserApi();
-  userApi.getUserByName(username: "test").then((value) {
-    print(value);
-  });
+
   print('Hello world: ${dart_console_openapi.calculate()}!');
 }
